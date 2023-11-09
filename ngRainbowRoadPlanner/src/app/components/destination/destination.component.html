@@ -1,0 +1,81 @@
+<br />
+<div class="container-fluid">
+  <div class="page" name="page">
+    <div class="row headerphoto">
+      <img
+        src="https://4kwallpapers.com/images/wallpapers/beach-aerial-view-3840x2160-60.jpg"
+        alt="Top Down Beach Photo"
+      />
+      <div class="centered">
+        <h1 class="display-1 imagetext">Destinations</h1>
+      </div>
+    </div>
+    <div class="row text-center buttongroup" name="buttongroup">
+      <form class="buttons">
+        <button
+          type="button"
+          class="btn btn-outline-primary btn-lg col-12"
+          (click)="findByType('gas')"
+        >
+          Gas</button
+        ><br />
+        <button
+          type="button"
+          class="btn btn-outline-primary btn-lg col-12"
+          (click)="findByType('food')"
+        >
+          Food</button
+        ><br />
+        <button
+          type="button"
+          class="btn btn-outline-primary btn-lg col-12"
+          (click)="findByType('hotel')"
+        >
+          Hotel</button
+        ><br />
+        <button
+          type="button"
+          class="btn btn-outline-primary btn-lg col-12"
+          (click)="findByType('sight')"
+        >
+          Sights</button
+        ><br />
+        <hr />
+      </form>
+    </div>
+  </div>
+
+
+  <div
+    class="displaydestinations"
+    name="displayDestinations"
+    *ngIf="destinations"
+  >
+    <div
+
+      name="destinationsLoop"
+      *ngFor="let destination of destinations"
+    >
+      <div class="row">
+        <div class="col text-center">
+          <img
+            class="businessimages border"
+            src="{{ destination.imageUrl }}"
+            alt="{{ destination.description }}"
+          />
+        </div>
+        <div class="col text-center">
+          <h4>{{ destination.name }}</h4>
+          <p>Description: {{ destination.description }}</p>
+          <p>Phone Number: {{ destination.phone }}</p>
+          <p>
+            Location: {{ destination.address.city }},
+            {{ destination.address.state }}
+          </p>
+          <p>Cost: ${{ destination.fee }}</p>
+        </div>
+      </div>
+      <hr />
+    </div>
+  </div>
+</div>

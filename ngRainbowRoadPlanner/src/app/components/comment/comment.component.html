@@ -1,0 +1,56 @@
+<div *ngIf="!selected && !editComment">
+  <h2>Add Comment</h2>
+  <form>
+    <div class="form-group">
+      <label for="comment">Comment</label>
+      <textarea id="comment" class="form-control" [(ngModel)]="newComment.description" name="description" required></textarea>
+      <label for="user"></label>
+
+    </div>
+    <!-- <button (click)="createComment(newComment)" class="btn btn-primary">Submit</button> -->
+  </form>
+</div>
+
+<div *ngIf="selected && editComment">
+  <h2>Edit Comment</h2>
+  <form (ngSubmit)="updateComment(editComment, 0)">
+    <div class="form-group">
+      <label for="editComment">Comment</label>
+      <textarea id="editComment" class="form-control" [(ngModel)]="editComment.description" name="description" required></textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="button" class="btn btn-secondary" (click)="editComment = null">Cancel</button>
+  </form>
+</div>
+
+<div *ngIf="comments.length > 0">
+  <h2>Comments</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Comment</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let comment of comments">
+        <td>{{ comment.description }}</td>
+        <td>
+          <button class="btn btn-link" (click)="displayComment(comment)">View</button>
+          <button class="btn btn-link" (click)="updateComment(comment, 0)">Edit</button>
+          <button class="btn btn-link" (click)="deleteComment(comment.id, 0)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="selected && !editComment">
+  <h2>Comment Detail</h2>
+  <div class="card">
+    <div class="card-body">
+      <p>{{ selected.description }}</p>
+    </div>
+  </div>
+  <button class="btn btn-secondary mt-2" (click)="displayTable()">Back</button>
+</div>

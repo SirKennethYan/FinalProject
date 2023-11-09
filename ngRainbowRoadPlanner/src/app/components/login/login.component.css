@@ -1,0 +1,22 @@
+.loginpage {
+  transform: translateY(75px);
+  background-color: #f3f6f4;
+}
+
+.display-1 {
+  height: 500px;
+  width: 500px;
+  color: #f3f6f4;
+  position: absolute;
+  top: 50%;
+  left: 51%;
+  transform: translate(-50%, -50%);
+}
+.logoutbutton {
+  transform: translateX(100px);
+  transform: translateY(650px);
+}
+
+.logouttext {
+  color: #010101;
+}

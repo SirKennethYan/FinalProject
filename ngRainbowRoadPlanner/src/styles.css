@@ -1,0 +1,63 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.header-with-image {
+  background-image: url("https://b.kisscc0.com/20180517/rlw/kisscc0-travel-website-web-hosting-service-namecheap-domai-nature-5afd874a85c6a4.669703911526564682548.jpg");
+}
+
+.top-photo {
+  width: 80em;
+  height: auto;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+.top {
+  height: 500px;
+}
+
+/* Set height of the grid so .sidenav can be 100% (adjust as needed) */
+.row.content {
+  height: auto;
+}
+
+/* Set gray background color and 100% height */
+.sidenav {
+  background-color: #f6e1c3;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%23F6E1C3' cx='50' cy='0' r='50'/%3E%3Cg fill='%23f6dbb6' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%23f6d4a9' cx='50' cy='100' r='50'/%3E%3Cg fill='%23f6cd9d' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%23f6c691' cx='50' cy='200' r='50'/%3E%3Cg fill='%23f6bf85' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%23f7b879' cx='50' cy='300' r='50'/%3E%3Cg fill='%23f7b16e' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%23f8a963' cx='50' cy='400' r='50'/%3E%3Cg fill='%23f8a158' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%23f9994e' cx='50' cy='500' r='50'/%3E%3Cg fill='%23fa9044' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%23fa883b' cx='50' cy='600' r='50'/%3E%3Cg fill='%23fb7e32' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%23fb7429' cx='50' cy='700' r='50'/%3E%3Cg fill='%23fc6a21' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%23fd5e18' cx='50' cy='800' r='50'/%3E%3Cg fill='%23fd5111' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%23fe4109' cx='50' cy='900' r='50'/%3E%3Cg fill='%23fe2d03' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23FF0000' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: contain;
+}
+
+/* Set black background color, white text and some padding */
+footer {
+  background-color: #fe2c02;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+}
+
+/* On small screens, set height to 'auto' for sidenav and grid */
+@media screen and (max-width: 767px) {
+  .sidenav {
+    height: auto;
+    padding: 15px;
+  }
+  .row.content {
+    height: auto;
+  }
+}
+
+@media (min-width: 992px) {
+  .rounded-tr-lg-0 {
+    border-top-right-radius: 0;
+  }
+
+  .rounded-bl-lg-5 {
+    border-bottom-left-radius: 0.5rem;
+  }
+}

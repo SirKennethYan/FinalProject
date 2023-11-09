@@ -1,0 +1,71 @@
+<img src="assets/dock.png" class="fixed-width" />
+<h1 class="centered">Rainbow Roadtrip</h1>
+
+<div class="container-fluid">
+  <div class="row no-padding">
+    <div class="col-sm-1 sidenav"></div>
+    <div class="col-md-10 middle-col">
+      <div class="row text-center">
+        <!-- Welcome message and Map Button -->
+        <br />
+        <h3 class="responsive-text">
+          Welcome to Rainbow Roadtrip Planner, where your journey towards the
+          perfect road trip begins! Our vibrant and user-friendly platform is
+          designed to help you craft unforgettable adventures with ease. Whether
+          you're exploring the open road with friends, family, or venturing
+          solo, we've got you covered!
+        </h3>
+        <br />
+
+        <div class="container">
+          <img class="mapimage" src="assets/map.png" alt="mapimage" />
+          <p>
+            <input
+              class="btn btn-default centered map-text"
+              type="submit"
+              value="Trip Maker"
+              (click)="navigateToTrip()"
+            />
+          </p>
+        </div>
+      </div>
+      <div class="row text-center">
+        <!-- Featured Trips, Carousel, and Footer -->
+
+        <h2>Featured Trips</h2>
+
+        <div class="row" *ngFor="let trip of trips | slice : 0 : 3">
+          {{ trip.id }}
+          {{ trip.description }}
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="cards-container">
+          <div class="scene">
+            <div class="card col-md-10" [routerLink]="['/trip/' + 1]">
+              <div class="card-face-front card-face">
+                <img class="card-image" src="assets/featured1.png" alt="" />
+                <p class="image-text">Alumni Trip</p>
+              </div>
+
+              <div class="card-face-back card-face">
+                <img class="card-image" src="assets/featured1.png" alt="" />
+              </div>
+            </div>
+            <div class="card col-md-10" [routerLink]="['/trip/' + 2]">
+              <div class="card-face-front card-face">
+                <img class="card-image" src="assets/featured3.png" alt="" />
+                <p class="image-text">Summer Break</p>
+              </div>
+              <div class="card-face-back card-face">
+                <img class="card-image" src="assets/featured3.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+    </div>
+    <div class="col-sm-1 sidenav"></div>
+  </div>
+</div>

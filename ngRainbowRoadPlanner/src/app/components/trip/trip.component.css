@@ -1,0 +1,78 @@
+body {
+  text-align: center;
+}
+
+.tripBackground {
+  background-color: rgb(253, 245, 234);
+}
+
+.backGroundColor {
+  background-color: rgb(253, 245, 234);
+}
+
+#tripDetail {
+  background-color: rgb(253, 245, 234);
+
+}
+
+
+h1,
+h2,
+h3 {
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0px 0px 20px;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+.create-trip-form {
+  background-color: white;
+  font-family: Helvetica;
+  margin: 0px 0px;
+  font-size: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+}
+
+.create-trip-form input[type="text"],
+.create-trip-form input[type="date"],
+.create-trip-form textarea,
+.create-trip-form select {
+  padding: 10px;
+  border: 1px solid #fe2c02;
+  border-radius: 3px;
+  margin-bottom: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 16px;
+  color: grey;
+}
+
+.trip-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+.trip-table th,
+.trip-table td {
+  padding: 10px;
+  padding-top: 10px;
+  text-align: left;
+  border-bottom: 1px solid #fe2c02;
+}
+
+.trip-table {
+  width: 50%;
+}
+
+.past-trips-heading {
+  padding-top: 40px;
+}
+

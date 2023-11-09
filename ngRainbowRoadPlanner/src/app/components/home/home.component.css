@@ -1,0 +1,172 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 40px;
+  color: #ffffff;
+  margin: 1em;
+}
+
+h3 {
+  font-size: 20px;
+  color: #fe2c02;
+}
+
+.fixed-width {
+  width: 100%;
+  display: block;
+}
+
+.centered {
+  font-size: 85px;
+  opacity: 0.9;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  top: 30%;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 100%;
+}
+.no-padding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.responsive-text {
+  color: #ffffff;
+  font-size: 3rem;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  margin: 1em;
+  margin-bottom: 2em;
+}
+
+.map-text {
+  color: #ffffff;
+  font-size: 60px;
+  text-align: center;
+}
+
+.mapimage {
+  border-radius: 100px;
+  width: 80%;
+}
+
+.featuredimage {
+  border-radius: 30px;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  width: 100%;
+}
+
+.carousel {
+  width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.carousel-item img {
+  width: 560px;
+  height: 100% !important;
+  object-fit: cover;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50vh;
+}
+
+.scene {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2.5em;
+  perspective: 1000px;
+  z-index: 1;
+}
+
+.card {
+  background: transparent;
+  width: 40em;
+  height: 25em;
+  border-radius: 25px;
+  transition: 1s ease-in-out;
+  transform-style: preserve-3d;
+  color: white;
+  cursor: pointer;
+}
+
+.card:hover {
+  transform: rotateY(0.5turn);
+}
+
+.card-face {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: 1s ease-in-out;
+  /* -webkit-box-reflect: below 0
+    linear-gradient(transparent, transparent, rgba(0, 0, 0, 0.4)); */
+}
+
+.card-face-front {
+  backface-visibility: visible;
+  z-index: 2;
+  transform: rotateY(0deg) translateZ(1px);
+}
+
+.card-face-back {
+  z-index: 1;
+}
+
+.card-image {
+  width: 40em;
+  height: 25em;
+  object-fit: cover;
+  border-radius: 25px;
+}
+
+.middle-col {
+  background-color: #f6e1c3;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 1000'%3E%3Cg %3E%3Ccircle fill='%23F6E1C3' cx='50' cy='0' r='50'/%3E%3Cg fill='%23f6dbb6' %3E%3Ccircle cx='0' cy='50' r='50'/%3E%3Ccircle cx='100' cy='50' r='50'/%3E%3C/g%3E%3Ccircle fill='%23f6d4a9' cx='50' cy='100' r='50'/%3E%3Cg fill='%23f6cd9d' %3E%3Ccircle cx='0' cy='150' r='50'/%3E%3Ccircle cx='100' cy='150' r='50'/%3E%3C/g%3E%3Ccircle fill='%23f6c691' cx='50' cy='200' r='50'/%3E%3Cg fill='%23f6bf85' %3E%3Ccircle cx='0' cy='250' r='50'/%3E%3Ccircle cx='100' cy='250' r='50'/%3E%3C/g%3E%3Ccircle fill='%23f7b879' cx='50' cy='300' r='50'/%3E%3Cg fill='%23f7b16e' %3E%3Ccircle cx='0' cy='350' r='50'/%3E%3Ccircle cx='100' cy='350' r='50'/%3E%3C/g%3E%3Ccircle fill='%23f8a963' cx='50' cy='400' r='50'/%3E%3Cg fill='%23f8a158' %3E%3Ccircle cx='0' cy='450' r='50'/%3E%3Ccircle cx='100' cy='450' r='50'/%3E%3C/g%3E%3Ccircle fill='%23f9994e' cx='50' cy='500' r='50'/%3E%3Cg fill='%23fa9044' %3E%3Ccircle cx='0' cy='550' r='50'/%3E%3Ccircle cx='100' cy='550' r='50'/%3E%3C/g%3E%3Ccircle fill='%23fa883b' cx='50' cy='600' r='50'/%3E%3Cg fill='%23fb7e32' %3E%3Ccircle cx='0' cy='650' r='50'/%3E%3Ccircle cx='100' cy='650' r='50'/%3E%3C/g%3E%3Ccircle fill='%23fb7429' cx='50' cy='700' r='50'/%3E%3Cg fill='%23fc6a21' %3E%3Ccircle cx='0' cy='750' r='50'/%3E%3Ccircle cx='100' cy='750' r='50'/%3E%3C/g%3E%3Ccircle fill='%23fd5e18' cx='50' cy='800' r='50'/%3E%3Cg fill='%23fd5111' %3E%3Ccircle cx='0' cy='850' r='50'/%3E%3Ccircle cx='100' cy='850' r='50'/%3E%3C/g%3E%3Ccircle fill='%23fe4109' cx='50' cy='900' r='50'/%3E%3Cg fill='%23fe2d03' %3E%3Ccircle cx='0' cy='950' r='50'/%3E%3Ccircle cx='100' cy='950' r='50'/%3E%3C/g%3E%3Ccircle fill='%23FF0000' cx='50' cy='1000' r='50'/%3E%3C/g%3E%3C/svg%3E");
+  background-attachment: fixed;
+  background-size: contain;
+  margin: 0;
+}
+
+.image-text {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 3em;
+  font-weight: 300 italic;
+  position: center;
+  top: 40%;
+  right: 30%;
+}

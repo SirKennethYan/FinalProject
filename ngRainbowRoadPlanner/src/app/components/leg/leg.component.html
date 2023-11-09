@@ -1,0 +1,36 @@
+
+<div>
+  <form>
+    <label for="startDestination">Start</label>
+    <input
+      type="text"
+      name="startDestination"
+      #startDestination="ngModel"
+      [ngModel]="newLeg.startDestination?.address?.city"
+    />
+
+    <label for="endDestination">End</label>
+    <input
+      type="text"
+      name="endDestination"
+      #endDestination="ngModel"
+      [ngModel]="newLeg.endDestination?.address?.city"
+    />
+    <label for="name">Leg Name</label>
+    <input type="text" name="name" [(ngModel)]="newLeg.name"/>
+    <label for="description">Description</label>
+    <input type="text" name="description" [(ngModel)]="newLeg.description"/>
+    <label for="legNumber">Leg Number</label>
+    <input type="number" name="legNumber" [(ngModel)]="newLeg.legNumber"/>
+    <input type="submit" (click)="createLeg(newLeg)" />
+    <!-- <button type="submit" (click)="createTrip(newTrip)">Create Trip</button> -->
+  </form>
+  <google-map
+    height="25em"
+    width="50%"
+    (mapClick)="handleMapClick($event)"
+  ></google-map>
+</div>
+<div>
+  <app-destination></app-destination>
+</div>

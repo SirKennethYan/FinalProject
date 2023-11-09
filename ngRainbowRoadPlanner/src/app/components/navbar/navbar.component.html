@@ -1,0 +1,71 @@
+<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary" class="navbar">
+  <div class="container-fluid">
+    <button
+      (click)="isCollapsed = !isCollapsed"
+      [attr.aria-expanded]="!isCollapsed"
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarTogglerDemo01"
+      aria-controls="navbarTogglerDemo01"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div
+      [ngbCollapse]="isCollapsed"
+      class="collapse navbar-collapse"
+      id="navbarTogglerDemo01"
+    >
+      <a class="navbar-brand" [routerLink]="['/home']">Home</a>
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item" *ngIf="!loggedIn()">
+          <a class="nav-link" (click)="showSignupModal()">Sign Up</a>
+        </li>
+        <li class="nav-item" *ngIf="loggedIn()">
+          <a class="nav-link" [routerLink]="['/profile']">Profile</a>
+        </li>
+        <li class="nav-item" *ngIf="!loggedIn()">
+          <a class="nav-link" [routerLink]="['/login']">Login</a>
+        </li>
+        <li class="nav-item" *ngIf="loggedIn()">
+          <a class="nav-link" [routerLink]="['/logout']">Log Out</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> -->
+
+<nav class="navbar navbar-expand-sm" id="navbar">
+  <!-- Links -->
+  <ul class="navbar-nav fixed-top">
+    <li class="nav-item">
+      <!-- <a class="nav-link" [routerLink]="['/home']">Home</a> -->
+      <a class="nav-link" [routerLink]="['/home']">
+        <i class="bi bi-house-door-fill"></i>
+      </a>
+    </li>
+    <li class="nav-item" *ngIf="!loggedIn()">
+      <a class="nav-link" (click)="showSignupModal()">Sign Up</a>
+    </li>
+
+    <li class="nav-item" *ngIf="loggedIn()">
+      <a class="nav-link" [routerLink]="['/profile']">Profile</a>
+    </li>
+    <li class="nav-item" *ngIf="!loggedIn()">
+      <a class="nav-link" [routerLink]="['/login']">Login</a>
+    </li>
+    <li class="nav-item" *ngIf="loggedIn()">
+      <a class="nav-link" [routerLink]="['/trip']">New Trip</a>
+    </li>
+    <li class="nav-item" *ngIf="loggedIn()">
+      <a class="nav-link" [routerLink]="['/destination']">Destinations</a>
+    </li>
+    <li class="nav-item" *ngIf="loggedIn()">
+      <a class="nav-link" (click)="logout()" [routerLink]="['/logout']"
+        >Log Out</a
+      >
+    </li>
+  </ul>
+</nav>
